@@ -1,37 +1,79 @@
-# perspection.org
+# Trinity Tools
 
-Interactive tools and frameworks for Faceless Reclamation™ and the Trinity Method™.
+Working tool and site build for Trinity / Faceless Reclaimation-facing material.
 
-This repository contains the perspection.org website, featuring the Faceless Reclamation handout and the foundational concepts of Perspection.
+This repository is a practical build container. It may include handouts, interface experiments, visual tools, charts, Manus exports, and implementation drafts connected to the broader ecosystem.
 
-## About
+It is not the canonical Perspection governance repository.
 
-**perspection.org** is a minimal, archival presence designed to hold observation without pressure to act. It serves as a stance, not a method—presenting the Faceless Reclamation framework for taking back your story.
+## Current status
 
-## Key Concepts
+This repo is under boundary audit.
 
-- **Perspection**: The art of seeing clearly in the middle of the fire. The practice of inspecting your perception before you settle on a perspective.
-- **The Trinity Method**: A recursive system (Encounter → Interrogation → Integration) that keeps your understanding alive, tested, and constantly refined.
-- **Faceless Reclamation**: A framework for reclaiming your story from the faceless forces of fear and conditioning.
+Some existing material may reference Perspection, Trinity, Faceless Reclaimation, and Living Survival Guide concepts in the same surface. That material is being preserved while it is sorted by function.
 
-## Getting Started
+See `PROJECT_BOUNDARY.md` for containment rules.
+
+## Project role
+
+This repository may hold:
+
+- Trinity Method / Trinity Framework implementation experiments
+- Faceless Reclaimation-facing handouts and public-facing explanatory material
+- Living Survival Guide tool fragments, charts, and interface drafts
+- Manus-exported app code that needs sorting
+- Practical UI experiments that may later become separate repos or apps
+
+## This repository does not own
+
+- The canonical Perspection governance stack
+- System Refusal rules as a source of authority
+- Perspection entry-surface copy
+- The final structure of Faceless Reclaimation
+- The final structure of the Living Survival Guide
+
+## Related repositories
+
+| Repository | Role |
+|---|---|
+| `7u4n3r/Perspection` | Canonical Perspection governance / reference surface |
+| `7u4n3r/faceless-reclaimation` | Reclaimation-facing public material and lived-experience products |
+| `7u4n3r/trinity-framework-site` | Trinity-specific site material, if separated |
+| `7u4n3r/system-analysis-reference` | Neutral system analysis and reference material |
+
+## Operating rule
+
+Interoperable does not mean merged.
+
+No project may redefine another project's purpose.
+
+## Getting started
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-The site will be available at `http://localhost:3000/`
+The local site will be available at:
 
-## Design Philosophy
+```bash
+http://localhost:3000/
+```
 
-This site adheres to strict design constraints:
-- Visually neutral and minimal
-- Plain typography and layout
-- No symbolic or branded elements
-- Content presented verbatim from source
-- Archival presence only, not instructional
+## Scripts
+
+```bash
+pnpm dev      # run local development server
+pnpm build    # build the Vite app and server bundle
+pnpm start    # run production bundle
+pnpm check    # run TypeScript check
+pnpm format   # format project files
+```
+
+## Boundary audit issue
+
+Cleanup is tracked in GitHub issue #1.
 
 ## License
 
-Free to share. Hold the line.
+See repository files for applicable license details.
