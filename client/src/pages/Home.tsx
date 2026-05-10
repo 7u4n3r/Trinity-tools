@@ -1,112 +1,66 @@
 import { Streamdown } from 'streamdown';
 
 /**
- * perspection.org: Faceless Reclamation Handout
- * 
- * Design constraint: Visually neutral and minimal
- * - Plain typography
- * - Plain layout
- * - No symbolic or branded elements
- * - Archival presence only
- * - Content verbatim from source
+ * Trinity Tools: neutral sandbox index
+ *
+ * This page intentionally avoids presenting Perspection, Trinity,
+ * Faceless Reclaimation, or the Living Survival Guide as one merged identity.
  */
 
 export default function Home() {
   const content = `
-# FACELESS RECLAMATION
+# Trinity Tools
 
-A Framework for Taking Back Your Story
+Working build and tool sandbox.
 
-facelessreclamation.com · perspection.org
+This surface holds experiments, Manus exports, UI drafts, handout fragments, and tool prototypes while they are being sorted into the correct project containers.
 
----
-
-## The Core Problem
-
-You are standing in the fire. An experience, a feeling, or a fear is consuming you — it feels total, absolute, and real. This raw, unfiltered experience is the Lived Fire. It is the starting point. But it is not the end.
-
-Our default reaction is to fuse with this fire — to believe the story it tells us without question. This is how fear becomes a faceless force that dictates our lives, and how perception stagnates into illusion.
-
-**Perspection** is the art of seeing clearly in the middle of the fire. It is the master skill that allows you to separate yourself from the chaos and reclaim your power — the practice of inspecting your perception before you settle on a perspective.
+It is not the canonical Perspection governance surface.
 
 ---
 
-## The Skill: Perspection
+## Current role
 
-Perspection is a living neologism that fuses three essential elements:
+This repository is used for material that is still being tested, preserved, or routed.
 
-| Term | Definition |
-|------|------------|
-| Perception | The raw data you receive |
-| Inspection | The conscious examination of that data |
-| Perspective | The meaning you choose to assign |
+Useful fragments may later move into:
 
-Most people collapse these three into one automatic reaction. Perspection is the practice of **separating them** — creating a gap where your power lives. This gap is where you reclaim your story from the faceless forces of fear and conditioning.
-
----
-
-## The Method: The Trinity
-
-Perspection is powered by the **Trinity Method** — a recursive system that keeps your understanding alive, tested, and constantly refined. It is the circuit-breaker for distortion.
-
-### 01 ENCOUNTER
-
-**Perception**
-
-The raw intake. Unfiltered signal from your senses and nervous system. Messy, noisy, biased by first contact.
-
-*"What am I experiencing right now?"*
-
-Mantra: *"I am noticing the perception of..."*
-
-### 02 INTERROGATION
-
-**Inspection**
-
-The pressure test. Pause. Break down the perception. Compare against evidence, memory, external input. Contradictions and hidden assumptions surface here.
-
-*"What do I know — and what still hides in shadow?"*
-
-Mantra: *"How is this showing up in me? Let me observe."*
-
-### 03 INTEGRATION
-
-**Perspective**
-
-The synthesis. Inspected fragments arrange into a functional, lived truth — not ultimate Truth, but a working frame. This new perspective seeds your next Encounter.
-
-*"What does this mean for how I move, act, or respond?"*
-
-Mantra: *"What is a more true and useful story about this?"*
-
-Perspective doesn't end the cycle — it seeds the next Encounter. Each loop sharpens the lens. This is Perspection in action: ever-evolving clarity.
+| Destination | Function |
+|---|---|
+| Perspection | Governance, refusal rules, observation-only constraints |
+| Faceless Reclaimation | Public Reclaimation material, zines, artifacts, story-facing offers |
+| Trinity Framework Site | Trinity-specific method explanation, diagrams, and site structure |
+| System Analysis Reference | Neutral evidence mapping, timelines, claim-boundary templates |
+| KY County Map | ABLE-KY county navigation and civic/legal-access routing |
 
 ---
 
-## Perspection in Action
+## Preserved material
 
-**Scenario: You make a mistake at work and your boss points it out.**
+The previous homepage handout has been preserved here:
 
-| Phase | Without Perspection | With Perspection (Trinity Method) |
-|-------|-------------------|----------------------------------|
-| 1. Encounter | Hot flush of shame. "I'm an idiot." A feeling of dread. | "I am perceiving a hot flush of shame. I am noticing the thought, 'I'm an idiot.'" |
-| 2. Interrogation | Skipped entirely. | "Is this thought true? The mistake was real, but does it make me an 'idiot'? I've done good work before. This is my default Installed Myth." |
-| 3. Integration | "I'm going to get fired. I'm terrible at my job. I can't do anything right." | "The feedback was about one action, not my whole identity. This shame is an overreaction. This is data for improvement." |
-| Outcome | Avoid boss. Confidence shattered. Myth gets stronger. | Thank boss. Ask clarifying question. Make a note. Move forward. |
+\`docs/preserved/FACELESS_RECLAMATION_HANDOUT.md\`
+
+That handout is valuable, but it blends multiple project identities. It should be reviewed before being used as public entry copy.
 
 ---
 
-## The Core Truth
+## Operating rule
 
-**Your freedom lives in the gap between Perception and Perspective.**
+Interoperable does not mean merged.
 
-That gap is created by Inspection. The practice of creating and using that space is called Perspection. It is not a destination — it is a living process. Practice this, and you will learn to harness your fire, not be consumed by it.
-
-**This is the first step in Faceless Reclamation.**
+No project may redefine another project's purpose.
 
 ---
 
-Faceless Reclamation · perspection.org · Free to share. Hold the line.
+## Next sorting target
+
+Review preserved handout material and classify sections as:
+
+- Reclaimation-facing
+- Trinity-specific
+- Perspection-governance-adjacent
+- Archive only
   `;
 
   return (
