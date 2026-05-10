@@ -43,7 +43,7 @@
 }
 
 :root {
-  /* perspection.org: Minimal, neutral palette */
+  /* Trinity Tools: minimal neutral sandbox palette */
   --primary: oklch(0.235 0.015 65);
   --primary-foreground: oklch(1 0 0);
   --sidebar-primary: oklch(0.235 0.015 65);
