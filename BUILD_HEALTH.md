@@ -58,7 +58,21 @@ Each log file is trimmed around a 1MB limit, but the collector can still create 
 
 `.gitignore` has been added to prevent `.manus-logs/`, build output, dependencies, env files, and log files from being committed.
 
-## Added guardrail
+## Analytics status
+
+Analytics are currently disabled.
+
+Unresolved analytics placeholders were removed from `client/index.html` to prevent broken requests or deploy confusion when environment variables are missing.
+
+See:
+
+`docs/ANALYTICS.md`
+
+Rule:
+
+Do not add analytics by placeholder. Only add tracking when endpoint, website ID, deployment env values, and intent are clear.
+
+## Added guardrails
 
 `.gitignore` now excludes:
 
@@ -70,6 +84,11 @@ Each log file is trimmed around a 1MB limit, but the collector can still create 
 - `*.log`
 - `.env` files
 - OS/editor noise
+
+`ErrorBoundary.tsx` has been hardened:
+
+- development mode shows stack traces
+- production mode shows a generic reload message
 
 ## Safe local check sequence
 
@@ -95,7 +114,16 @@ If the app fails, inspect:
 - Do not remove the debug collector unless it is causing active failures.
 - Do not split the app code until current build health is known.
 - Do not turn this repo into the canonical site for all projects.
+- Do not re-add analytics unless intentionally configured.
 
 ## Next recommended repair
 
-Add a small `docs/prompts/MANUS_RECOVERY_PROMPT.md` so Manus can be instructed to diagnose build/deploy issues without redesigning or merging project identities.
+Run or request a real build/check pass in Manus using:
+
+```bash
+pnpm install
+pnpm check
+pnpm build
+```
+
+Then record the exact result before making further code changes.
