@@ -23,9 +23,11 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+      const isDevelopment = import.meta.env.DEV;
+
       return (
         <div className="flex items-center justify-center min-h-screen p-8 bg-background">
-          <div className="flex flex-col items-center w-full max-w-2xl p-8">
+          <div className="flex flex-col items-center w-full max-w-2xl p-8 text-center">
             <AlertTriangle
               size={48}
               className="text-destructive mb-6 flex-shrink-0"
@@ -33,11 +35,17 @@ class ErrorBoundary extends Component<Props, State> {
 
             <h2 className="text-xl mb-4">An unexpected error occurred.</h2>
 
-            <div className="p-4 w-full rounded bg-muted overflow-auto mb-6">
-              <pre className="text-sm text-muted-foreground whitespace-break-spaces">
-                {this.state.error?.stack}
-              </pre>
-            </div>
+            <p className="text-muted-foreground mb-6 max-w-xl">
+              The page could not finish loading. Reload the page to try again.
+            </p>
+
+            {isDevelopment && this.state.error?.stack ? (
+              <div className="p-4 w-full rounded bg-muted overflow-auto mb-6 text-left">
+                <pre className="text-sm text-muted-foreground whitespace-break-spaces">
+                  {this.state.error.stack}
+                </pre>
+              </div>
+            ) : null}
 
             <button
               onClick={() => window.location.reload()}
