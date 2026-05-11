@@ -6,6 +6,26 @@ This file records the current build/deploy health observations for `Trinity-tool
 
 The goal is to keep the app usable while preventing Manus/debug/export noise from becoming project identity or repo bloat.
 
+## Current health status
+
+Build verification passed.
+
+Manus reported all three commands completed successfully:
+
+```bash
+pnpm install
+pnpm check
+pnpm build
+```
+
+Build output was clean.
+
+Only notice:
+
+- `index-BggwEdbK.js` chunk size warning: 1,441 kB
+- non-blocking advisory about code splitting
+- not an error
+
 ## Current app stack
 
 Observed from `package.json` and app files:
@@ -118,12 +138,12 @@ If the app fails, inspect:
 
 ## Next recommended repair
 
-Run or request a real build/check pass in Manus using:
+Optional performance pass only.
 
-```bash
-pnpm install
-pnpm check
-pnpm build
-```
+The current chunk-size warning is non-blocking. Do not optimize it unless the live preview feels slow or the bundle size becomes a real deployment concern.
 
-Then record the exact result before making further code changes.
+Potential later optimization:
+
+- inspect large dependencies
+- consider route-level/code splitting
+- avoid changing project boundaries or content structure just to silence a warning
